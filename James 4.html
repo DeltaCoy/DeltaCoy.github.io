@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>James Aldwyn Dela Rosa — Home</title>
+  <style>
+    :root{
+      --accent:#00d1ff;
+      --text:#ffffff;
+      --outline: rgba(0,0,0,0.6);
+      --card-bg: rgba(255,255,255,0.04);
+      --max-width: 1100px;
+    }
+
+    /* Reset */
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial}
+
+    /* Full-viewport stretched background:
+       Replace background.jpg with your image.
+       If you want a plain color, change fallback-color below */
+    body{
+      min-height:100%;
+      background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url('pic.jpeg') center/cover no-repeat;
+      /* fallback solid color if image missing */
+      background-color:#0a6bff;
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:var(--card-bg);
+      padding:40px;
+      border-radius:14px;
+      box-shadow:0 18px 50px rgba(2,6,23,0.45);
+      backdrop-filter: blur(8px);
+      flex-wrap:wrap;
+    }
+
+    /* Left column - intro */
+    .intro{
+      flex:1 1 480px;
+      min-width:260px;
+    }
+
+    .logo{
+      width:72px;height:72px;border-radius:12px;
+      display:inline-grid;place-items:center;font-weight:700;
+      background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.06);
+      margin-bottom:18px;
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size:clamp(26px,4vw,44px);
+      line-height:1.02;
+      /* outlined text for contrast (stroke + shadow) */
+      -webkit-text-stroke: 1px var(--outline);
+      text-shadow:
+        0 1px 0 rgba(0,0,0,0.35),
+        0 10px 30px rgba(2,6,23,0.5);
+    }
+
+    p.lead{
+      margin:0 0 18px;
+      max-width:60ch;
+      font-size:15px;
+      color:rgba(255,255,255,0.95);
+      -webkit-text-stroke: 0.5px rgba(0,0,0,0.35);
+    }
+
+    /* Right column - navigation */
+    nav{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      flex:0 0 auto;
+    }
+
+    a.btn{
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:600;
+      font-size:14px;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,0.06);
+      background:transparent;
+      -webkit-text-stroke: 0.5px var(--outline);
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    a.btn:hover{ transform:translateY(-4px); background:rgba(255,255,255,0.04)}
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:linear-gradient(90deg,var(--accent), #66f0ff);
+      color:#012e34;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow: 0 10px 30px rgba(6,40,45,0.18);
+    }
+
+    /* Responsive */
+    @media (max-width:780px){
+      .container{padding:24px}
+      nav{width:100%;justify-content:space-between;order:3}
+      .intro{width:100%;order:1}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="hero-title">
+    <div class="intro">
+      <div class="logo" aria-hidden="true">YN</div>
+      <h1 id="hero-title">Hi — I'm Your Name</h1>
+      <p class="lead">Minimalist designer & creator. I build thoughtful interfaces and craft visuals that communicate clearly. Links below show more about me, my hobbies, and how to reach me.</p>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a class="btn" href="about.html">About</a>
+      <a class="btn" href="blog.html">Blog / Hobbies</a>
+      <a class="btn" href="contact.html">Contact</a>
+      <a class="cta" href="about.html">Learn more →</a>
+    </nav>
+  </main>
+</body>
+</html>
+
